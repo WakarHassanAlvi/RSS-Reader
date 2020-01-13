@@ -73,7 +73,7 @@
 
     <hr style="margin-top:35px;">
     
-    <h4 style="margin-top:35px;">Feed Items</h4>
+    <h5 style="margin-top:25px;">Feed Items</h5>
     <div class="row justify-content-center">
                 @foreach($feeds['entry'] as $entry)
                 <div class="col-md-12" >
@@ -83,21 +83,10 @@
                     
                     <p class="card-text">{!!$entry['summary']!!}</p>
                     <a href="{{$entry['link']['@attributes']['href']}}" target="_blank" class="btn btn-primary">Go to article</a>
-                    <hr>
-                    <div class="row" style="margin-top:20px;">
-                      <div class="col-4">
-                        <b>Date Updated:</b> {{date("jS M Y g:i A", strtotime($entry['updated']))}}
-                      </div>
-                      <div class="col-1">
-                        |
-                      </div>
-                      <div class="col-4">
-                        <b>Author:</b> <a href="{{$entry['author']['uri']}}" target="_blank">{{$entry['author']['name']}}</a>
-                      </div>
-                    <!--<ul class="list-group list-group-flush" style="margin-top:20px;">
+                    <ul class="list-group list-group-flush" style="margin-top:20px;">
                       <li class="list-group-item"><b>Date Updated -</b> {{date("jS M Y g:i A", strtotime($entry['updated']))}}</li>
                       <li class="list-group-item"><b>Author -</b> <a href="{{$entry['author']['uri']}}" target="_blank">{{$entry['author']['name']}}</a></li>
-                    </ul>-->
+                    </ul>
                   </div>
                 </div>
               </div>
